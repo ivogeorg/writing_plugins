@@ -13,6 +13,11 @@ Exercise in writing Gazebo plugins, the brains behind simulated robot behavior :
    export GAZEBO_PLUGIN_PATH=${GAZEBO_PLUGIN_PATH}:~/catkin_ws/devel/lib
    ```  
 3. Resetting the Gazebo simulation time does not reset any counter in the plugin code.
+4. Initializing a `std::array` without with an _implicit_ constructor requres "extra" braces in the init list:
+   ```
+   const std::array<std::pair<int, int>, 4> dir = 
+       {{{1, 0}, {0, 1}, {-1, 0}, {0, -1}}};
+   ``` 
 
 ### References
 
