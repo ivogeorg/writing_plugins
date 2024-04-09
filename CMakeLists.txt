@@ -1,4 +1,6 @@
 cmake_minimum_required(VERSION 3.0.2)
+#set(CMAKE_CXX_STANDARD 14)
+
 project(writing_plugins)
 
 find_package(gazebo REQUIRED)
@@ -22,3 +24,6 @@ list(APPEND CMAKE_CXX_FLAGS "${GAZEBO_CXX_FLAGS}")
 
 add_library(my_gazebo_plugin SHARED src/my_gazebo_plugin.cc)
 target_link_libraries(my_gazebo_plugin ${GAZEBO_LIBRARIES})
+
+add_library(world_plugin SHARED src/world_plugin.cc)
+target_link_libraries(world_plugin ${GAZEBO_LIBRARIES})
