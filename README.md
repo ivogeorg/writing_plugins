@@ -17,7 +17,8 @@ Exercise in writing Gazebo plugins, the brains behind simulated robot behavior :
    ```
    const std::array<std::pair<int, int>, 4> dir = 
        {{{1, 0}, {0, 1}, {-1, 0}, {0, -1}}};
-   ``` 
+   ```
+5. Strange problem with almost identical code blocks either crashing Gazebo or not in [a_model_plugin.cc](src/a_model_plugin.cc).
 
 ### References
 
